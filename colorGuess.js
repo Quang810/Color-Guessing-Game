@@ -15,6 +15,7 @@ colorDisplay.textContent = pickedColor;
 
 gameStart();
 function gameStart(){
+	/loop through all 6 squares appear on the screen
     for(var i = 0; i < squares.length; i++){
         // add initial colors to squares
         squares[i].style.background = colors[i];
@@ -25,11 +26,13 @@ function gameStart(){
             var clickedColor = this.style.background;
             //compare color to pickedColor
             if(clickedColor === pickedColor) {
+		    //if clicked color matches picked color, announce the winning condition
                 messageDisplay.textContent = "Correct!";
                 resetButton.textContent ='Play Again?';
                 changeColors(clickedColor);
                 h1.style.background = clickedColor;
             } else {
+		    //if player chooses wrong, turn the clicked color into background color
                 this.style.background = "#756D6D";
                 messageDisplay.textContent = "Try Again";
             }
@@ -47,6 +50,7 @@ function changeColors(color) {
 }
 
 function pickColor() {
+	//pick a random number, choose color matching the position of the number as picked color
 	var random = Math.floor(Math.random() * colors.length);
 	return colors[random];
 }
@@ -74,6 +78,7 @@ function randomColor() {
 }
 
 resetButton.addEventListener('click', function () {
+	//add event listener for reset button
     h1.style.background = "steelblue";
     messageDisplay.textContent = "";
     resetButton.textContent = 'New Colors';
@@ -90,6 +95,7 @@ resetButton.addEventListener('click', function () {
 })
 
 easyMode.addEventListener('click', function () {
+	//add event listener for easy button
     easyMode.classList.add('chooseMode');
     hardMode.classList.remove('chooseMode');
 
@@ -122,6 +128,7 @@ easyMode.addEventListener('click', function () {
 })
 
 hardMode.addEventListener('click', function () {
+	//add event listener for hard button
     hardMode.classList.add('chooseMode');
     easyMode.classList.remove('chooseMode');
 
