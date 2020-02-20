@@ -115,12 +115,6 @@ easyMode.addEventListener('click', function () {
             squares[i].style.display = "none";
         }
 
-        // squares[i].style.backgroundColor = colors[i];
-        // if(i > 2){
-        //     squares[i].style.backgroundColor = "#756D6D";
-        // }
-
-        //add click listeners to squares
         
     }
     
@@ -145,47 +139,13 @@ hardMode.addEventListener('click', function () {
             squares[i].style.backgroundColor = colors[i];
             squares[i].style.display = "block";
 
-        // squares[i].style.backgroundColor = colors[i];
-        // if(i > 2){
-        //     squares[i].style.backgroundColor = "#756D6D";
-        // }
-
-        //add click listeners to squares
+  
         
     }
     
 
 })
 
-// function changeColors(color) {
-//     for(var i=0; i < squares.length; i++){
-//         squares[i].style.backgroundColor = color;
-//     }
-// }
-
-// function randomColors() {
-//     var random = Math.floor(Math.random() * colors.length);
-//     return colors[random];
-// }
-
-// function generateColors(num) {
-//     var arr = [];
-//     for(var i = 0; i < num; i++){
-//         arr.push(randomColors());
-//     }
-//     return arr;
-// }
-
-// function randomColors() {
-//     var redLevel = Math.floor(Math.random() * 256);
-
-//     var greenLevel = Math.floor(Math.random() * 256);
-
-//     var blueLevel = Math.floor(Math.random() * 256);
-
-//     return "rgb(" + redLevel + ", " + greenLevel + ", " + blueLevel + ")";
-
-// }
 
 
 
